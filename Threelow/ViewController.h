@@ -21,15 +21,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *diceFiveImageView;
 
-@property (nonatomic) Dice *dice1;
-
-@property (nonatomic) Dice *dice2;
-
-@property (nonatomic) Dice *dice3;
-
-@property (nonatomic) Dice *dice4;
-
-@property (nonatomic) Dice *dice5;
 
 - (IBAction)RollDiceButtonPressed:(UIButton *)sender;
 

@@ -13,13 +13,13 @@
 -(instancetype)init {
     self = [super init];
     if (self) {
-        _diceOne = @[
+        _dice = @[
                      [[DiceFace1 alloc]initWithImage:[UIImage imageNamed:@"diceFace1.png"]],
-                     [[DiceFace2 alloc]initWithImage:[UIImage imageNamed:@"diceFace2.png"]],
-                     [[DiceFace3 alloc]initWithImage:[UIImage imageNamed:@"diceFace3.png"]],
-                     [[DiceFace4 alloc]initWithImage:[UIImage imageNamed:@"diceFace4.png"]],
-                     [[DiceFace5 alloc]initWithImage:[UIImage imageNamed:@"diceFace5.png"]],
-                     [[DiceFace6 alloc]initWithImage:[UIImage imageNamed:@"diceFace6.png"]],
+                     [[DiceFace1 alloc]initWithImage:[UIImage imageNamed:@"diceFace2.png"]],
+                     [[DiceFace1 alloc]initWithImage:[UIImage imageNamed:@"diceFace3.png"]],
+                     [[DiceFace1 alloc]initWithImage:[UIImage imageNamed:@"diceFace4.jpg"]],
+                     [[DiceFace1 alloc]initWithImage:[UIImage imageNamed:@"diceFace5.png"]],
+                     [[DiceFace1 alloc]initWithImage:[UIImage imageNamed:@"diceFace6.png"]],
                      
                      ];
         
@@ -67,11 +67,19 @@
 
 -(UIImage *)rollDiceButtonPressed {
     
-    int r = arc4random_uniform(6);
-    [self.diceOne objectAtIndex:r]//fixxxxx maybe image should all be in one class
+    
+    DiceFace1 *randomDiceFace = [self.dice objectAtIndex:[self randomDice]];
     
     
-    return [self.diceOne objectAtIndex:r];
+    return randomDiceFace.diceFaceImage;
+}
+
+-(NSUInteger)randomDice {
+    
+    self.diceOneIndex = arc4random_uniform(6);
+    
+    return self.diceOneIndex;
+    
 }
 
 

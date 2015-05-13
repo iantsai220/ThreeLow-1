@@ -11,6 +11,17 @@
 
 @interface ViewController ()
 
+@property (nonatomic) Dice *dice1;
+
+@property (nonatomic) Dice *dice2;
+
+@property (nonatomic) Dice *dice3;
+
+@property (nonatomic) Dice *dice4;
+
+@property (nonatomic) Dice *dice5;
+
+
 @end
 
 @implementation ViewController
@@ -19,10 +30,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     _dice1 = [Dice new];
-//    _dice2 = [Dice new];
-//    _dice3 = [Dice new];
-//    _dice4 = [Dice new];
-//    _dice5 = [Dice new];
+    _dice2 = [Dice new];
+    _dice3 = [Dice new];
+    _dice4 = [Dice new];
+    _dice5 = [Dice new];
     
     
 
@@ -36,11 +47,11 @@
 
 - (IBAction)RollDiceButtonPressed:(UIButton *)sender {
     
-    self.diceOneImageView = [self.dice1.rollDiceButtonPressed rollDiceButtonPressed];
-//    [self.diceTwoImageView setImage:[self.dice2 rollDiceButtonPressed]];
-//    [self.diceThreeImageView setImage:[self.dice3 rollDiceButtonPressed]];
-//    [self.diceFourImageView setImage:[self.dice4 rollDiceButtonPressed]];
-//    [self.diceFiveImageView setImage:[self.dice5 rollDiceButtonPressed]];
+    self.diceOneImageView.image = [self.dice1 rollDiceButtonPressed];
+    self.diceTwoImageView.image = [self.dice2 rollDiceButtonPressed];
+    self.diceThreeImageView.image = [self.dice3 rollDiceButtonPressed];
+    self.diceFourImageView.image = [self.dice4 rollDiceButtonPressed];
+    self.diceFiveImageView.image = [self.dice5 rollDiceButtonPressed];
     
 }
 
