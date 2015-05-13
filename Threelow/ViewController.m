@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 
+
 @interface ViewController ()
 
 @end
@@ -17,6 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    _dice1 = [Dice new];
+//    _dice2 = [Dice new];
+//    _dice3 = [Dice new];
+//    _dice4 = [Dice new];
+//    _dice5 = [Dice new];
+    
+    
+
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,6 +35,13 @@
 }
 
 - (IBAction)RollDiceButtonPressed:(UIButton *)sender {
+    
+    self.diceOneImageView = [self.dice1.rollDiceButtonPressed rollDiceButtonPressed];
+//    [self.diceTwoImageView setImage:[self.dice2 rollDiceButtonPressed]];
+//    [self.diceThreeImageView setImage:[self.dice3 rollDiceButtonPressed]];
+//    [self.diceFourImageView setImage:[self.dice4 rollDiceButtonPressed]];
+//    [self.diceFiveImageView setImage:[self.dice5 rollDiceButtonPressed]];
+    
 }
 
 - (IBAction)resetDiceButtonPressed:(UIButton *)sender {

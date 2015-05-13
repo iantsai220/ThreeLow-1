@@ -12,7 +12,7 @@
 
 @interface DiceFace2 : NSObject
 
-@property (nonatomic) UIImage *diceFaceTwoImage;
+@property (nonatomic) UIImage *diceFaceImage;
 
 -(instancetype)initWithImage: (UIImage *)image;
 

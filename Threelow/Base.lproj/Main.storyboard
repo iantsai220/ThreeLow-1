@@ -43,19 +43,19 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WDq-0H-Xj2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="diceFace1.png" translatesAutoresizingMaskIntoConstraints="NO" id="WDq-0H-Xj2">
                                 <rect key="frame" x="45" y="37" width="130" height="130"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dLu-0b-fKH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="diceFace1.png" translatesAutoresizingMaskIntoConstraints="NO" id="dLu-0b-fKH">
                                 <rect key="frame" x="235" y="37" width="130" height="130"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PH7-X5-nnO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="diceFace1.png" translatesAutoresizingMaskIntoConstraints="NO" id="PH7-X5-nnO">
                                 <rect key="frame" x="424" y="37" width="130" height="130"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q6j-m3-meE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="diceFace1.png" translatesAutoresizingMaskIntoConstraints="NO" id="q6j-m3-meE">
                                 <rect key="frame" x="139" y="218" width="130" height="130"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GE3-r1-jn7">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="diceFace1.png" translatesAutoresizingMaskIntoConstraints="NO" id="GE3-r1-jn7">
                                 <rect key="frame" x="332" y="223" width="130" height="130"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ojs-NT-V1w">
@@ -70,10 +70,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="diceFiveImageView" destination="GE3-r1-jn7" id="9si-9M-OIm"/>
+                        <outlet property="diceFourImageView" destination="q6j-m3-meE" id="i2Q-cQ-U7H"/>
+                        <outlet property="diceOneImageView" destination="WDq-0H-Xj2" id="Sqn-4a-TK0"/>
+                        <outlet property="diceThreeImageView" destination="PH7-X5-nnO" id="EzG-QD-Vo2"/>
+                        <outlet property="diceTwoImageView" destination="dLu-0b-fKH" id="0X2-bM-p2q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="189" y="305"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="diceFace1.png" width="120" height="120"/>
+    </resources>
 </document>

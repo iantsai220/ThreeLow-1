@@ -1,5 +1,5 @@
 //
-//  DiceFace1.h
+//  DiceFace6.h
 //  Threelow
 //
 //  Created by Ian Tsai on 2015-05-12.
@@ -10,10 +10,10 @@
 #import "UIKit/UIKit.h"
 
 
-@interface DiceFace1 : NSObject
+@interface DiceFace6 : NSObject
 
 @property (nonatomic) UIImage *diceFaceImage;
 
--(instancetype)initWithImage:(UIImage *)image;
+-(instancetype)initWithImage: (UIImage *)image;
 
 @end
