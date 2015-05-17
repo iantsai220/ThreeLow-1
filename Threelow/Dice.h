@@ -24,7 +24,7 @@
 //@property (nonatomic) NSArray *diceFive;
 
 
-@property (nonatomic) NSUInteger diceOneIndex;
+@property (nonatomic) int diceIndex;
 
 //@property (nonatomic) int diceTwoIndex;
 //

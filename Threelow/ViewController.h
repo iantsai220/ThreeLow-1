@@ -21,11 +21,29 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *diceFiveImageView;
 
+@property (nonatomic, strong) NSMutableArray *holdArray;
+
 
 - (IBAction)RollDiceButtonPressed:(UIButton *)sender;
 
 
 - (IBAction)resetDiceButtonPressed:(UIButton *)sender;
+
+
+- (IBAction)holdDiceOne:(UIButton *)sender;
+
+
+- (IBAction)holdDiceTwo:(UIButton *)sender;
+
+
+- (IBAction)holdDiceThree:(UIButton *)sender;
+
+
+- (IBAction)holdDiceFour:(UIButton *)sender;
+
+
+- (IBAction)holdDiceFive:(UIButton *)sender;
+
 
 
 @end
