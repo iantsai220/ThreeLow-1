@@ -16,6 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFj-B7-n6n">
+                                <rect key="frame" x="54" y="426" width="130" height="30"/>
+                                <state key="normal" title="Roll Dice">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="228" y="216" width="85" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="RollDiceButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3aO-Di-K6o"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2e-G6-y4i">
                                 <rect key="frame" x="366" y="501" width="46" height="30"/>
                                 <state key="normal" title="Hold Dice">
@@ -118,30 +130,40 @@
                                     <action selector="holdDiceFour:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zuf-2X-Hh4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFj-B7-n6n">
-                                <rect key="frame" x="54" y="426" width="130" height="30"/>
-                                <state key="normal" title="Roll Dice">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQZ-we-enI">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="228" y="216" width="85" height="30"/>
+                                    <rect key="frame" x="228" y="472" width="123" height="21"/>
                                 </variation>
-                                <connections>
-                                    <action selector="RollDiceButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3aO-Di-K6o"/>
-                                </connections>
-                            </button>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMI-Zc-UsK">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="228" y="443" width="85" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="jNL-0l-aqX"/>
                                 <exclude reference="dE8-9z-QE5"/>
+                                <exclude reference="wQZ-we-enI"/>
+                                <exclude reference="vMI-Zc-UsK"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="jNL-0l-aqX"/>
                                 <include reference="dE8-9z-QE5"/>
+                                <include reference="wQZ-we-enI"/>
+                                <include reference="vMI-Zc-UsK"/>
                             </mask>
                         </variation>
                     </view>
@@ -151,6 +173,7 @@
                         <outlet property="diceOneImageView" destination="WDq-0H-Xj2" id="Sqn-4a-TK0"/>
                         <outlet property="diceThreeImageView" destination="PH7-X5-nnO" id="EzG-QD-Vo2"/>
                         <outlet property="diceTwoImageView" destination="dLu-0b-fKH" id="0X2-bM-p2q"/>
+                        <outlet property="displayScore" destination="wQZ-we-enI" id="huK-Sq-8tk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

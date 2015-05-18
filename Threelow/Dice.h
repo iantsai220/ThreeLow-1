@@ -38,6 +38,9 @@
 
 -(NSUInteger)randomDice;
 
+-(int)checkNumber:(int)number;
+
+-(int)addNumber:(int)number1 add:(int)number2 add:(int)number3 add:(int)number4 add:(int)number5;
 
 
 

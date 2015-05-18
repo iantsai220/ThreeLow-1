@@ -79,6 +79,21 @@
     
 }
 
+-(int)checkNumber:(int)number {
+    if (number == 2) {
+        return 0;
+    }
+    else {
+        return number+1;
+    }
+}
+
+-(int)addNumber:(int)number1 add:(int)number2 add:(int)number3 add:(int)number4 add:(int)number5{
+    
+    return number1 + number2 + number3 + number4 + number5;
+    
+}
+
 
 
 

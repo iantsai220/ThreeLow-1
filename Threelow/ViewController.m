@@ -31,6 +31,8 @@
 
 @property (nonatomic) UIButton *holdDiceFive;
 
+@property (nonatomic) int count;
+
 @end
 
 @implementation ViewController
@@ -61,27 +63,50 @@
 
 - (IBAction)RollDiceButtonPressed:(UIButton *)sender {
     
-    //if nsarray does not contain holdDicebutton random
+    //add
     
     if ([self.holdArray containsObject:self.holdDiceOne] == NO) {
         self.diceOneImageView.image = [self.dice1 rollDiceButtonPressed];
+    
     }
     
     if ([self.holdArray containsObject:self.holdDiceTwo] == NO) {
         self.diceTwoImageView.image = [self.dice2 rollDiceButtonPressed];
+
     }
     
     if ([self.holdArray containsObject:self.holdDiceThree] == NO) {
         self.diceThreeImageView.image = [self.dice3 rollDiceButtonPressed];
+
     }
     
     if ([self.holdArray containsObject:self.holdDiceFour] == NO) {
         self.diceFourImageView.image = [self.dice4 rollDiceButtonPressed];
+
     }
     
     if ([self.holdArray containsObject:self.holdDiceFive] == NO) {
          self.diceFiveImageView.image = [self.dice5 rollDiceButtonPressed];
+
     }
+    
+    int number1 = [self.dice1 checkNumber:self.dice1.diceIndex];
+    int number2 = [self.dice2 checkNumber:self.dice2.diceIndex];
+    int number3 = [self.dice3 checkNumber:self.dice3.diceIndex];
+    int number4 = [self.dice4 checkNumber:self.dice4.diceIndex];
+    int number5 = [self.dice5 checkNumber:self.dice5.diceIndex];
+    
+    self.count = [self.dice1 addNumber:number1 add:number2 add:number3 add:number4 add:number5];
+  
+    self.displayScore.text = [NSString stringWithFormat:@"%d", self.count];
+    
+    //everytime random is pressed
+    //generate a new set of total
+        //if held, number dont change
+        //
+
+    
+    
     
 }
 
@@ -107,6 +132,7 @@
     
     if ([self hold:self.holdDiceOne atIndex:0] == YES){
         [self.holdDiceOne setBackgroundColor:[UIColor redColor]];
+        
     }
     else {
         [self.holdDiceOne setBackgroundColor:[UIColor whiteColor]];

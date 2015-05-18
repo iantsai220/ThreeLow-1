@@ -45,6 +45,7 @@
 - (IBAction)holdDiceFive:(UIButton *)sender;
 
 
+@property (weak, nonatomic) IBOutlet UILabel *displayScore;
 
 @end
 
